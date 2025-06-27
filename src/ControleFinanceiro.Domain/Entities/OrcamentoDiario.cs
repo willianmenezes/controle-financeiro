@@ -6,11 +6,11 @@ public class OrcamentoDiario
 
     public DateTime Data { get; private set; }
 
-    public decimal Saldo { get; private set; }
+    public decimal Saldo => ObterSaldo();
 
-    public decimal TotalEntradas { get; private set; }
+    public decimal TotalEntradas => ObterTotalEntradas();
 
-    public decimal TotalSaidas { get; private set; }
+    public decimal TotalSaidas => ObterTotalSaidas();
 
     public IEnumerable<Termometro> Termometros { get; private set; } = [];
 
@@ -20,8 +20,24 @@ public class OrcamentoDiario
     {
         Id = Guid.NewGuid();
         Data = data;
-        TotalEntradas = decimal.Zero;
-        TotalSaidas = decimal.Zero;
-        Saldo = decimal.Zero;
+    }
+
+    private decimal ObterTotalEntradas()
+    {
+        return Lancamentos
+            .Where(l => l.Data.Date == Data.Date && l.Categoria.Tipo == Enums.Tipo.Entrada)
+            .Sum(l => l.Valor);
+    }
+
+    private decimal ObterTotalSaidas()
+    {
+        return Lancamentos
+            .Where(l => l.Data.Date == Data.Date && l.Categoria.Tipo is Enums.Tipo.Saida or Enums.Tipo.Investimento)
+            .Sum(l => l.Valor);
+    }
+
+    private decimal ObterSaldo()
+    {
+        return TotalEntradas - TotalSaidas;
     }
 }
