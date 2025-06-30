@@ -1,23 +1,28 @@
 ﻿using ControleFinanceiro.Application.Interfaces.Repositories;
 using ControleFinanceiro.Domain.Entities;
+using ControleFinanceiro.Infra.Context;
+using Microsoft.EntityFrameworkCore;
 
 namespace ControleFinanceiro.Infra.Repositories;
 
 internal class OrcamentoMensalRepository : IOrcamentoMensalRepository
 {
-    private readonly List<OrcamentoMensal> _orcamentosMensais = new();
+    private readonly ControleFinanceiroContext _context;
 
-    public OrcamentoMensalRepository()
+    public OrcamentoMensalRepository(ControleFinanceiroContext context)
     {
+        _context = context;
     }
 
     public async Task RegistrarAsync(OrcamentoMensal orcamento, CancellationToken cancellationToken)
     {
-        await Task.Run(() => { _orcamentosMensais.Add(orcamento); }, cancellationToken);
+        await _context.OrcamentosMensais.AddAsync(orcamento, cancellationToken);
     }
 
-    public Task<IEnumerable<OrcamentoMensal>> ObterAsync(CancellationToken cancellation)
+    public async Task<IEnumerable<OrcamentoMensal>> ObterAsync(CancellationToken cancellation)
     {
-        return Task.Run(() => _orcamentosMensais.AsEnumerable(), cancellation);
+        return await _context.OrcamentosMensais 
+            .AsNoTracking()
+            .ToListAsync(cancellation);
     }
 }

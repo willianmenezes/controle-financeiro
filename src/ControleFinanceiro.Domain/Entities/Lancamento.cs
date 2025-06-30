@@ -11,15 +11,20 @@ public sealed class Lancamento
     public DateTime Data { get; private set; }
 
     public Guid CategoriaId { get; private set; }
+    
+    public Guid OrcamentoDiarioId { get; private set; }
 
-    public Categoria Categoria { get; private set; }
+    public Categoria? Categoria { get; private set; }
+    
+    public OrcamentoDiario? OrcamentoDiario { get; private set; }
 
-    public Lancamento(decimal valor, string descricao, DateTime data, Guid categoriaId)
+    public Lancamento(decimal valor, string descricao, DateTime data, Guid categoriaId, Guid orcamentoDiarioId)
     {
         Id = Guid.NewGuid();
         Valor = valor;
         Descricao = descricao;
         Data = data;
         CategoriaId = categoriaId;
+        OrcamentoDiarioId = orcamentoDiarioId;
     }
 }

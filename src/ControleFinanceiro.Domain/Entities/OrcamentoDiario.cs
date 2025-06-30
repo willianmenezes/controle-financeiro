@@ -6,20 +6,23 @@ public class OrcamentoDiario
 
     public DateTime Data { get; private set; }
 
+    public Guid OrcamentoMensalId { get; private set; }
+
     public decimal Saldo => ObterSaldo();
 
     public decimal TotalEntradas => ObterTotalEntradas();
 
     public decimal TotalSaidas => ObterTotalSaidas();
 
-    public IEnumerable<Termometro> Termometros { get; private set; } = [];
+    public OrcamentoMensal? OrcamentoMensal { get; private set; }
 
     public IEnumerable<Lancamento> Lancamentos { get; private set; } = [];
 
-    public OrcamentoDiario(DateTime data)
+    public OrcamentoDiario(DateTime data, Guid orcamentoMensalId)
     {
         Id = Guid.NewGuid();
         Data = data;
+        OrcamentoMensalId = orcamentoMensalId;
     }
 
     private decimal ObterTotalEntradas()

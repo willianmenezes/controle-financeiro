@@ -8,8 +8,8 @@ public static class ApplicationServiceCollectionExtensions
 {
     public static IServiceCollection AddApplicationServices(this IServiceCollection services)
     {
-        services.AddSingleton<IObterOrcamentosMensaisHandler, ObterOrcamentosMensaisHandler>();
-        services.AddSingleton<ICadastrarOrcamentoMensalHandler, CadastrarOrcamentoMensalHandler>();
+        services.AddScoped<IObterOrcamentosMensaisHandler, ObterOrcamentosMensaisHandler>();
+        services.AddScoped<ICadastrarOrcamentoMensalHandler, CadastrarOrcamentoMensalHandler>();
         return services;
     }
 }

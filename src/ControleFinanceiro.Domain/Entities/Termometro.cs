@@ -10,8 +10,6 @@ public sealed class Termometro
 
     public string Cor { get; private set; }
 
-    public IEnumerable<OrcamentoMensal>? Orcamentos { get; private set; } = [];
-
     public Termometro(
         decimal valorInicial,
         decimal valorFinal,
