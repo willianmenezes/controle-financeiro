@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ControleFinanceiro.Infra.EntityConfig;
 
-public  sealed class CategoriaEntityConfig : IEntityTypeConfiguration<Categoria>
+internal sealed class CategoriaEntityConfig : IEntityTypeConfiguration<Categoria>
 {
     public void Configure(EntityTypeBuilder<Categoria> builder)
     {

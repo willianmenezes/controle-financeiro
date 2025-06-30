@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ControleFinanceiro.Infra.EntityConfig;
 
-public sealed class OrcamentoDiarioEntityConfig : IEntityTypeConfiguration<OrcamentoDiario>
+internal sealed class OrcamentoDiarioEntityConfig : IEntityTypeConfiguration<OrcamentoDiario>
 {
     public void Configure(EntityTypeBuilder<OrcamentoDiario> builder)
     {

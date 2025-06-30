@@ -11,4 +11,11 @@ public sealed class Categoria
     public Tipo Tipo { get; private set; }
 
     public IEnumerable<Lancamento> Lancamentos { get; private set; } = [];
+
+    public Categoria(string nome, Tipo tipo)
+    {
+        Id = Guid.NewGuid();
+        Nome = nome;
+        Tipo = tipo;
+    }
 }

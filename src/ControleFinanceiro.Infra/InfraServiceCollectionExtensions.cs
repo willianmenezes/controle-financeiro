@@ -16,6 +16,7 @@ public static class InfraServiceCollectionExtensions
         
         services.AddScoped<IOrcamentoMensalRepository, OrcamentoMensalRepository>();
         services.AddScoped<ILancamentoRepository, LancamentoRepository>();
+        services.AddScoped<ICategoriaRepository, CategoriaRepository>();
         return services;
     }
 }

@@ -1,5 +1,5 @@
-﻿using ControleFinanceiro.Application.Handlers.OrcamentoMensalHandler.Cadastrar;
-using ControleFinanceiro.Application.Handlers.OrcamentoMensalHandler.Obter;
+﻿using ControleFinanceiro.Application.Handlers.OrcamentoMensalHandler.Obter;
+using ControleFinanceiro.Application.Handlers.OrcamentoMensalHandler.Registrar;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ControleFinanceiro.Api.Controllers;
@@ -8,23 +8,23 @@ namespace ControleFinanceiro.Api.Controllers;
 [Route("api/orcamentos-mensais")]
 public class OrcamentosMensaisController : ControllerBase
 {
-    private readonly ICadastrarOrcamentoMensalHandler _cadastrarOrcamentoMensalHandler;
+    private readonly IRegistrarOrcamentoMensalHandler _registrarOrcamentoMensalHandler;
     private readonly IObterOrcamentosMensaisHandler _obterOrcamentosMensaisHandler;
 
     public OrcamentosMensaisController(
-        ICadastrarOrcamentoMensalHandler cadastrarOrcamentoMensalHandler,
+        IRegistrarOrcamentoMensalHandler registrarOrcamentoMensalHandler,
         IObterOrcamentosMensaisHandler obterOrcamentosMensaisHandler)
     {
-        _cadastrarOrcamentoMensalHandler = cadastrarOrcamentoMensalHandler;
+        _registrarOrcamentoMensalHandler = registrarOrcamentoMensalHandler;
         _obterOrcamentosMensaisHandler = obterOrcamentosMensaisHandler;
     }
 
     [HttpPost]
     public async Task<IActionResult> CadastrarOrcamentoMensalAsync(
-        [FromBody] CadastrarOrcamentoMensalRequest request,
+        [FromBody] RegistrarOrcamentoMensalRequest request,
         CancellationToken cancellationToken)
     {
-        var response = await _cadastrarOrcamentoMensalHandler.HandleAsync(request, cancellationToken);
+        var response = await _registrarOrcamentoMensalHandler.HandleAsync(request, cancellationToken);
         return Ok(response);
     }
     

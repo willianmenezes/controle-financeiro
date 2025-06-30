@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ControleFinanceiro.Infra.EntityConfig;
 
-public class TermomentroEntityConfig : IEntityTypeConfiguration<Termometro>
+internal class TermomentroEntityConfig : IEntityTypeConfiguration<Termometro>
 {
     public void Configure(EntityTypeBuilder<Termometro> builder)
     {

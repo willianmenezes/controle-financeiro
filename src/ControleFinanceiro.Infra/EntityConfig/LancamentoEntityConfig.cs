@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace ControleFinanceiro.Infra.EntityConfig;
 
-public sealed class LancamentoEntityConfig : IEntityTypeConfiguration<Lancamento>
+internal sealed class LancamentoEntityConfig : IEntityTypeConfiguration<Lancamento>
 {
     public void Configure(EntityTypeBuilder<Lancamento> builder)
     {

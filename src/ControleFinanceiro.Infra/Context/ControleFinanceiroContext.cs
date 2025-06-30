@@ -1,10 +1,11 @@
-﻿using ControleFinanceiro.Domain.Entities;
+﻿using ControleFinanceiro.Application.Interfaces;
+using ControleFinanceiro.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
 namespace ControleFinanceiro.Infra.Context;
 
-public class ControleFinanceiroContext : DbContext
+internal class ControleFinanceiroContext : DbContext, IUnitOfWork
 
 {
     private readonly IConfiguration _configuration;
@@ -55,4 +56,9 @@ public class ControleFinanceiroContext : DbContext
     public DbSet<Categoria> Categorias { get; set; }
 
     public DbSet<Termometro> Termomentros { get; set; }
+
+    public async Task CommitAsync(CancellationToken cancellationToken)
+    {
+        await SaveChangesAsync(cancellationToken);
+    }
 }
