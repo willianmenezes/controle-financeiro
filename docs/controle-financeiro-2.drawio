@@ -1,9 +1,12 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/28.2.5 Chrome/138.0.7204.251 Electron/37.6.1 Safari/537.36" version="28.2.5">
   <diagram name="Page-1" id="WZteWwdwyaMDc-Zc8JJQ">
-    <mxGraphModel dx="5603" dy="3797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="5603" dy="3797" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-103" value="" style="whiteSpace=wrap;html=1;fillColor=light-dark(#e3c800, #f5eb9e);strokeColor=#B09500;fillStyle=auto;fontColor=#000000;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="-560" width="2810" height="1040" as="geometry" />
+        </mxCell>
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-102" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#b1ddf0;strokeColor=#10739e;fillStyle=dashed;" vertex="1" parent="1">
           <mxGeometry x="1860" y="110" width="510" height="270" as="geometry" />
         </mxCell>
@@ -28,7 +31,7 @@
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-7" value="Processos de negocio" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;strokeColor=#3700CC;fillStyle=auto;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="1140" y="-855" width="70" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="Evpkn34Wj-W9CpjqlbQp-8" value="Agregado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=light-dark(#e3c800, #f5eb9e);strokeColor=#B09500;fillStyle=auto;fontColor=#000000;" vertex="1" parent="1">
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-8" value="Agregado" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=light-dark(#e3c800, #f5eb9e);strokeColor=#B09500;fillStyle=auto;fontColor=#000000;opacity=20;" vertex="1" parent="1">
           <mxGeometry x="1250" y="-855" width="70" height="70" as="geometry" />
         </mxCell>
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-9" value="Visualizacoes ou telas" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#60a917;strokeColor=#2D7600;fillStyle=auto;fontColor=#ffffff;" vertex="1" parent="1">
@@ -163,7 +166,7 @@
             <mxPoint x="1800" y="480" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="Evpkn34Wj-W9CpjqlbQp-67" value="Atualizar saida diaria" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-67" value="Atualizar saida diaria mensal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="1970" y="-200" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-68" value="Saidas diarias totais calculadas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FA6800,#E28845);fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="1">
@@ -172,7 +175,7 @@
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-69" value="Um saldo diario tem como referencia o saldo do dia anterior, entao qualquer alteracao nesse valor atualiza os saldo dos proximos dias, ate o fim do orcamento" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#6a00ff;strokeColor=#3700CC;fillStyle=auto;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="2190" y="220" width="150" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="Evpkn34Wj-W9CpjqlbQp-70" value="Atualizar saida total" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-70" value="Atualizar saida total mensal" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0050ef;strokeColor=#001DBC;fontColor=#ffffff;" vertex="1" parent="1">
           <mxGeometry x="1970" y="-40" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-71" value="Saidas totais calculadas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FA6800,#E28845);fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="1">
@@ -213,6 +216,15 @@
         </mxCell>
         <mxCell id="Evpkn34Wj-W9CpjqlbQp-90" value="Economias total atualizadas" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#FA6800,#E28845);fontColor=#000000;strokeColor=#C73500;" vertex="1" parent="1">
           <mxGeometry x="2300" y="1260" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-104" value="Orcamento" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=41;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="-560" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-105" value="" style="whiteSpace=wrap;html=1;fillColor=light-dark(#e3c800, #f5eb9e);strokeColor=#B09500;fillStyle=auto;fontColor=#000000;opacity=20;" vertex="1" parent="1">
+          <mxGeometry x="-320" y="730" width="2810" height="690" as="geometry" />
+        </mxCell>
+        <mxCell id="Evpkn34Wj-W9CpjqlbQp-106" value="Economia" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=41;" vertex="1" parent="1">
+          <mxGeometry x="-310" y="730" width="210" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
