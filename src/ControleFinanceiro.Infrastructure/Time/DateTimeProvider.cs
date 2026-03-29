@@ -1,0 +1,8 @@
+﻿using ControleFinanceiro.Core;
+
+namespace ControleFinanceiro.Infrastructure.Time;
+
+internal sealed class DateTimeProvider : IDateTimeProvider
+{
+    public DateTime UtcNow => DateTime.UtcNow;
+}
